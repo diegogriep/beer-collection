@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react'
-import NewComponent from '.'
+import Logo from '.'
 
 export default {
-  title: 'NewComponent',
-  component: NewComponent
+  title: 'components/Logo',
+  component: Logo
 } as Meta
 
 export const Default: StoryObj = {}

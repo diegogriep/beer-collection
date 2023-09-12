@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BeerCard /> should render the heading 1`] = `
+.c0 {
+  background-color: #FAE96F;
+  border-radius: 0.4rem;
+  padding: 2.4rem;
+  width: 100%;
+}
+
+.c0 h1 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.c0 h2 {
+  font-size: 1.4rem;
+}
+
+.c0 div {
+  column-gap: 1.6rem;
+  display: flex;
+  padding: 1.6rem 0;
+}
+
+.c0 p {
+  font-size: 1.4rem;
+}
+
+.c0 a {
+  font-size: 1.4rem;
+}
+
+.c1 {
+  background: linear-gradient(180deg, #C96E12 0%, #DF8D03 50%);
+  border: 0;
+  border-radius: 0.4rem;
+  color: #fff;
+  display: inline-flex;
+  cursor: pointer;
+  font: 700 1.6rem mocked,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  padding: 0.8rem 1.6rem;
+  text-decoration: none;
+}
+
+.c1:hover {
+  background: linear-gradient(180deg, #DF8D03 0%, #C96E12 50%);
+}
+
+@media (min-width: 450px) {
+  .c0 {
+    width: 30rem;
+  }
+}
+
+<div
+  class="c0"
+>
+  <h1>
+    Buzz
+  </h1>
+  <h2>
+    A Real Bitter Experience.
+  </h2>
+  <div>
+    <img
+      alt="Buzz"
+      data-nimg="1"
+      decoding="async"
+      height="128"
+      loading="lazy"
+      src="/_next/image?url=https%3A%2F%2Fimages.punkapi.com%2Fv2%2Fkeg.png&w=256&q=75"
+      srcset="/_next/image?url=https%3A%2F%2Fimages.punkapi.com%2Fv2%2Fkeg.png&w=96&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.punkapi.com%2Fv2%2Fkeg.png&w=256&q=75 2x"
+      style="color: transparent;"
+      width="75"
+    />
+    <p>
+      The earthy and floral aromas from the hops can be overpowering. Drop a little Cascade in at the end of the boil to lift the profile with a bit of citrus.
+    </p>
+  </div>
+  <a
+    href="/beer/1"
+  >
+    <a
+      class="c1"
+    >
+      Learn more
+    </a>
+  </a>
+</div>
+`;
