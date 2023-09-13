@@ -1,7 +1,6 @@
 import Image from 'next/image'
-import * as S from './styles'
-import Link from 'next/link'
 import Button from '../Button'
+import * as S from './styles'
 
 export type IngredientsBeerProps = {
   name: string
@@ -40,11 +39,9 @@ const BeerCard = ({ id, name, image_url, tagline, brewers_tips }: Partial<BeerPr
       <p>{brewers_tips}</p>
     </div>
 
-    <Link href={`/beer/${id}`} passHref>
-      <Button as='a'>
-        Learn more
-      </Button>
-    </Link>
+    <Button as='a' href={`/beer/${id}`} title='Learn more'>
+      Learn more
+    </Button>
   </S.Wrapper>
 )
 

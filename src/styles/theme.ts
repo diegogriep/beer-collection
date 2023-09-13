@@ -10,7 +10,7 @@ export const merriweatherFont = Merriweather({
 export default {
   grid: {
     container: '130rem',
-    gutter: '3.2rem'
+    gutter: '1.6rem'
   },
   border: {
     radius: '0.4rem'

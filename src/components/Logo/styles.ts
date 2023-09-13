@@ -9,19 +9,25 @@ export const Wrapper = styled.div`
     display: flex;
     gap: ${theme.spacings.xxsmall};
     justify-content: center;
+    text-align: center;
 
     svg {
       height: 5rem;
-      pointer-events: none;
       transition: transform 0.5s ease-out;
-
-      &:hover {
-        transform: rotate(45deg);
-      }
     }
 
     h1 {
       color: ${theme.colors.primary};
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        svg {
+          transform: rotate(45deg);
+        }
+      }
     }
 
     // mobile

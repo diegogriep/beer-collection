@@ -6,6 +6,7 @@ export const Wrapper = styled.main`
   ${({ theme }) => css`
     background-color: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
+    color: #000;
     padding: ${theme.spacings.small};
 
     h1 {
@@ -53,8 +54,6 @@ export const Wrapper = styled.main`
       margin: 0;
       padding: 0;
     }
-
-
 
     ${media.greaterThan('small')`
       article {

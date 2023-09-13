@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
+    color: #000;
     padding: ${theme.spacings.small};
     width: 100%;
 
@@ -32,7 +33,7 @@ export const Wrapper = styled.div`
     }
 
     ${media.greaterThan('small')`
-      width: 30rem;
+      width: 29rem;
     `}
   `}
 `

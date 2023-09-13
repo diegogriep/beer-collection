@@ -4,6 +4,7 @@ exports[`<BeerCard /> should render the heading 1`] = `
 .c0 {
   background-color: #FAE96F;
   border-radius: 0.4rem;
+  color: #000;
   padding: 2.4rem;
   width: 100%;
 }
@@ -79,13 +80,11 @@ exports[`<BeerCard /> should render the heading 1`] = `
     </p>
   </div>
   <a
+    class="c1"
     href="/beer/1"
+    title="Learn more"
   >
-    <a
-      class="c1"
-    >
-      Learn more
-    </a>
+    Learn more
   </a>
 </div>
 `;
