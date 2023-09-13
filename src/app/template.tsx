@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container'
+import Filter from '@/components/Filter'
 import Logo from '@/components/Logo'
 import * as S from '@/components/Main/styles'
 
@@ -11,6 +12,8 @@ const Template = ({ children, title = 'Beer collection' }: TemplateProps) => (
   <S.Wrapper>
     <header>
       <Logo />
+
+      <Filter />
     </header>
 
     <Container>
