@@ -6,7 +6,7 @@ import beer from './mock'
 export default {
   title: 'components/BeerCard',
   component: BeerCard,
-  args: { ...beer }
+  args: { ...beer[0] }
 } as Meta
 
 export const Default: StoryObj<BeerProps> = {

@@ -14,9 +14,9 @@ const Filter = () => {
     setValue(e.currentTarget.value)
   }
 
+  const { push } = useRouter()
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
-    const { push } = useRouter()
     event.preventDefault()
     push(`/?beer_name=${value}`)
   }

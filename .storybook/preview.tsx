@@ -1,6 +1,9 @@
 import React from 'react'
-import GlobalStyles from '../src/styles/global'
 import { ThemeProvider } from 'styled-components'
+
+import { AppRouterContext } from "next/dist/shared/lib/app-router-context";
+
+import GlobalStyles from '../src/styles/global'
 import theme from '../src/styles/theme'
 
 export const decorators = [
@@ -11,3 +14,9 @@ export const decorators = [
     </ThemeProvider>
   )
 ]
+
+export const parameters = {
+  nextjs: {
+    appDirectory: true,
+  }
+}

@@ -7,7 +7,7 @@ import { BeerProps } from '../BeerCard'
 export default {
   title: 'components/BeerDetail',
   component: BeerDetail,
-  args: { ...beer }
+  args: { ...beer[0] }
 } as Meta
 
 export const Default: StoryObj<BeerProps> = {

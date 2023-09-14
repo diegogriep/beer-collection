@@ -1,5 +1,3 @@
-import { render, screen } from '@testing-library/react'
-
 import { Container } from '.'
 import { renderWithTheme } from '../../utils/tests/helpers'
 

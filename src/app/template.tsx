@@ -1,4 +1,3 @@
-import Button from '@/components/Button'
 import { Container } from '@/components/Container'
 import Filter from '@/components/Filter'
 import Logo from '@/components/Logo'
