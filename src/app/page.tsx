@@ -14,5 +14,7 @@ export default async function Home() {
   const checkThereIsNewBottle: BeerProps = getStorageItem('newBottle')
   const allBeers = checkThereIsNewBottle ?  beers.concat(checkThereIsNewBottle).reverse() : beers
 
-  return allBeers.map(beer => <BeerCard key={beer.id} {...beer} />)
+  return allBeers.length > 0 ? allBeers.map(beer => <BeerCard key={beer.id} {...beer} />) : (
+    'No beers found'
+  )
 }

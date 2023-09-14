@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import { BeerProps, IngredientsKindProps } from '../BeerCard'
 import * as S from './styles'
-import { handleIngredientObj } from '@/utils/handleIngredientObj'
-import { formatIngredient } from '@/utils/formatIngredient'
+import { handleIngredientObj } from '../../utils/handleIngredientObj'
+import { formatIngredient } from '../../utils/formatIngredient'
 
 const BeerDetail = ({
   brewers_tips,

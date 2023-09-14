@@ -7,7 +7,7 @@ import beer from './mock'
 
 describe('<BeerCard />', () => {
   it('should render the heading', () => {
-    const { container } = renderWithTheme(<BeerCard {...beer} />)
+    const { container } = renderWithTheme(<BeerCard {...beer[0]} />)
 
     expect(screen.getByRole('heading', { name: /Buzz/i })).toBeInTheDocument()
 

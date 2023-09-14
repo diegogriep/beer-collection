@@ -22,7 +22,7 @@ describe('setStorageItem()', () => {
     setStorageItem('newBottle', '1')
 
     expect(window.localStorage.getItem('newBottle')).toStrictEqual(
-      JSON.stringify('1')
+      '1'
     )
   })
 })

@@ -52,7 +52,7 @@ export default function AddBeerPage() {
 
       {bottle && (
         <S.BoxInformation>
-          <h2>You can change the beer's name</h2>
+          <h2>You can change the beer name</h2>
 
           <form onSubmit={onSubmit}>
             <input onChange={onChange} value={value.name} id='beer_name' type="text"

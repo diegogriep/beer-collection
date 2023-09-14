@@ -2,8 +2,6 @@ import { IngredientsBeerProps, IngredientsKindProps } from "@/components/BeerCar
 
 export function formatIngredient (ingredient: IngredientsKindProps[]) {
   return Object.values(ingredient).map((content) => {
-    let step = ''
-
     return (
       content.map((info: IngredientsBeerProps, index: number) => {
         const contentName = info?.name
