@@ -2,6 +2,7 @@
 
 import BeerCard, { BeerProps } from "@/components/BeerCard";
 import { getData } from "@/utils/getData";
+import { getStorageItem } from "@/utils/localStorage";
 import { useSearchParams } from "next/navigation";
 
 export default async function Home() {
@@ -9,5 +10,9 @@ export default async function Home() {
 
   const beer_name = searchParams.get('beer_name')
   const beers: BeerProps[] = await getData(beer_name)
-  return beers.map(beer => <BeerCard key={beer.id} {...beer} />)
+
+  const checkThereIsNewBottle: BeerProps = getStorageItem('newBottle')
+  const allBeers = checkThereIsNewBottle ?  beers.concat(checkThereIsNewBottle).reverse() : beers
+
+  return allBeers.map(beer => <BeerCard key={beer.id} {...beer} />)
 }

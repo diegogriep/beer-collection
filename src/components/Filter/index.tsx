@@ -2,8 +2,9 @@
 
 import { FormEvent, useState } from 'react'
 import * as S from './styles'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Button from '../Button'
+import Link from 'next/link'
 
 const Filter = () => {
   const [value, setValue] = useState('')
@@ -19,13 +20,15 @@ const Filter = () => {
     event.preventDefault()
     push(`/?beer_name=${value}`)
   }
-  return (
+
+  return usePathname() !== '/add' && (
     <S.Wrapper>
-      <h4>Filter by name</h4>
+      <Link href={'/add'} title='add new bottle'>add new bottle</Link>
       <form onSubmit={onSubmit}>
-        <input onChange={onChange} type="text" name="beer_name" placeholder='What beer are you looking for?' />
+        <label htmlFor='beer_name'>Filter by name</label>
+        <input id='beer_name' onChange={onChange} type="text" name="beer_name" placeholder='What beer are you looking for?' />
         <Button type="submit">
-          Submit
+          Search
         </Button>
       </form>
     </S.Wrapper>

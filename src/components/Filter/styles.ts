@@ -6,13 +6,26 @@ export const Wrapper = styled.div`
     color: #fff;
     padding-top: ${theme.spacings.xxsmall};
 
-    h4 {
-      font-size: ${theme.font.sizes.small};
-      padding-bottom: ${theme.spacings.xxsmall};
+    > a {
+      color: #fff;
+      display: block;
+      font-size: ${theme.font.sizes.xsmall};
+      position: absolute;
+      right: ${theme.spacings.xxsmall};
+      top: ${theme.spacings.xxsmall};
     }
 
     form {
       display: flex;
+
+      button {
+        border-radius: 0 ${theme.border.radius} ${theme.border.radius} 0;
+      }
+    }
+
+    label {
+      display: none;
+      font-size: ${theme.font.sizes.xsmall};
     }
 
     input {
@@ -26,10 +39,6 @@ export const Wrapper = styled.div`
       text-decoration: none;
     }
 
-    button {
-      border-radius: 0 ${theme.border.radius} ${theme.border.radius} 0;
-    }
-
     ${media.greaterThan('small')`
       align-items: center;
       column-gap: ${theme.spacings.small};
@@ -37,9 +46,9 @@ export const Wrapper = styled.div`
       justify-content: center;
       padding-top: ${theme.spacings.medium};
 
-
-      h4 {
-        padding: 0;
+      label {
+        line-height: 3.4rem;
+        padding-right: ${theme.spacings.xsmall};
       }
 
       input {

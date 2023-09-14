@@ -8,7 +8,7 @@ export default async function BeerDetailPage({
 }: {
   params: { id: number }
 }) {
-  const [beer] = await getData(id)
+  const [beer] = await getData('', id)
 
   return <BeerDetail {...beer} />
 }

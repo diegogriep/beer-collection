@@ -57,10 +57,51 @@ export const Wrapper = styled.main`
 
     ${media.greaterThan('small')`
       article {
+        align-items: center;
         column-gap: ${theme.spacings.xsmall};
         display: flex;
         text-align: left;
       }
     `}
+  `}
+`
+
+export const BoxInformation = styled.div`
+  ${({ theme }) => css`
+    padding: ${theme.spacings.small};
+
+    form {
+      display: flex;
+
+      button {
+        border-radius: 0 ${theme.border.radius} ${theme.border.radius} 0;
+      }
+    }
+
+    input {
+      border: 0;
+      border-radius: ${theme.border.radius} 0 0 ${theme.border.radius};
+      color: ${theme.colors.mainBg};
+      cursor: pointer;
+      flex: 1;
+      font: ${theme.font.bold} ${theme.font.sizes.xsmall} ${theme.font.family};
+      padding: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
+      text-decoration: none;
+    }
+  `}
+`
+
+export const Button = styled.button`
+  ${({ theme }) => css`
+    cursor: pointer;
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.xsmall};
+  `}
+`
+
+export const Loading = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.mainBg};
+    display: block;
+    padding: ${theme.spacings.xxsmall} 0;
   `}
 `

@@ -1,8 +1,9 @@
 export const API_URL = 'https://api.punkapi.com/v2/beers'
 
-export async function getData(beer_name: string | null, id?: number) {
+export async function getData(beer_name: string | null, id?: number, random?: boolean) {
   const url = id ? `${API_URL}/${id}` :
-    beer_name ? `${API_URL}/?beer_name=${beer_name}` : API_URL
+    beer_name ? `${API_URL}/?beer_name=${beer_name}` :
+    random ? `${API_URL}/random` : API_URL
 
   const res = await fetch(url)
 
