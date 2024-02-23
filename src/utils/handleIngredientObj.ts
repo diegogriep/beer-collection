@@ -7,7 +7,7 @@ export function handleIngredientObj (ingredients: IngredientsKindProps) {
     if (typeof value === 'string') {
       ingredientsArr.push(`${ingredient}: ${value}`)
     } else {
-      let ingredientObj = {
+      const ingredientObj = {
         [ingredient]: value
       }
       ingredientsArr.push(ingredientObj)

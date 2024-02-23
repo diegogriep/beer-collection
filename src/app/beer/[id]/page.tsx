@@ -1,5 +1,3 @@
-'use client'
-
 import BeerDetail from '@/components/BeerDetail'
 import { getData } from '@/utils/getData'
 
