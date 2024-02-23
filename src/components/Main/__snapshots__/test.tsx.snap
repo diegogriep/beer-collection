@@ -114,7 +114,7 @@ exports[`<Main /> should render the heading 1`] = `
     Hello
   </main>
   <footer>
-    2023 - Beer collection
+    2024 - Beer collection
   </footer>
 </div>
 `;

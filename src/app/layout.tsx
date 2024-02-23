@@ -1,12 +1,10 @@
+'use client'
+
 import StyledComponentsRegistry from '@/lib/registry'
 
-import type { Metadata } from 'next'
-import { Providers } from './providers'
-
-export const metadata: Metadata = {
-  title: 'Beer collection',
-  description: 'The best beers in the world'
-}
+import GlobalStyles from '@/styles/global'
+import theme from '@/styles/theme'
+import { ThemeProvider } from 'styled-components'
 
 export default function RootLayout({
   children
@@ -17,7 +15,10 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StyledComponentsRegistry>
-          <Providers>{children}</Providers>
+          <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            {children}
+          </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>

@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { BeerProps, IngredientsKindProps } from '../BeerCard'
 import * as S from './styles'
@@ -10,7 +12,8 @@ const BeerDetail = ({
   image_url,
   ingredients,
   name,
-  tagline }: BeerProps) => {
+  tagline
+}: BeerProps) => {
   const mergedIngredients = handleIngredientObj(ingredients)
 
   return (
@@ -30,17 +33,23 @@ const BeerDetail = ({
 
           <h3>Ingredients</h3>
           <ul>
-            {mergedIngredients.map((ingredient: string | IngredientsKindProps[], i: number) => {
-              const topping = typeof ingredient === 'string' ?
-                ingredient :
-                Object.keys(ingredient)
+            {mergedIngredients.map(
+              (ingredient: string | IngredientsKindProps[], i: number) => {
+                const topping =
+                  typeof ingredient === 'string'
+                    ? ingredient
+                    : Object.keys(ingredient)
 
-              return <li key={i}>
-                <h4>{topping}</h4>
+                return (
+                  <li key={i}>
+                    <h4>{topping}</h4>
 
-                {typeof ingredient !== 'string' && formatIngredient(ingredient)}
-              </li>
-            })}
+                    {typeof ingredient !== 'string' &&
+                      formatIngredient(ingredient)}
+                  </li>
+                )
+              }
+            )}
           </ul>
         </section>
       </article>

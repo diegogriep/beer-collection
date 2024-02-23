@@ -28,18 +28,31 @@ export type BeerProps = {
   brewers_tips: string
 }
 
-const BeerCard = ({ id, name, image_url, tagline, brewers_tips }: Partial<BeerProps>) => (
+const BeerCard = ({
+  id,
+  name,
+  image_url,
+  tagline,
+  brewers_tips
+}: Partial<BeerProps>) => (
   <S.Wrapper>
     <h1>{name}</h1>
     <h2>{tagline}</h2>
 
     <div>
-      <Image alt={name!} src={image_url!} width={75} height={128} />
+      <Image
+        priority
+        style={{ width: 75, height: 75 }}
+        alt={name!}
+        src={image_url!}
+        width={75}
+        height={128}
+      />
 
       <p>{brewers_tips}</p>
     </div>
 
-    <Button as='a' href={`/beer/${id}`} title='Learn more'>
+    <Button as="a" href={`/beer/${id}`} title="Learn more">
       Learn more
     </Button>
   </S.Wrapper>
