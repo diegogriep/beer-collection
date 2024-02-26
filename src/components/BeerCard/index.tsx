@@ -10,7 +10,7 @@ export type IngredientsBeerProps = {
 }
 
 export type IngredientsKindProps = {
-  [name: string]: IngredientsBeerProps[] | string
+  [name: string]: IngredientsBeerProps[]
 }
 
 type IngredientAmountProps = {

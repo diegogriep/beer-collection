@@ -1,18 +1,14 @@
-import { IngredientsBeerProps, IngredientsKindProps } from "@/components/BeerCard"
+import {
+  IngredientsBeerProps,
+  IngredientsKindProps
+} from '@/components/BeerCard'
 
-export function formatIngredient (ingredient: IngredientsKindProps[]) {
+export function formatIngredient(ingredient: IngredientsKindProps) {
   return Object.values(ingredient).map((content) => {
-    return (
-      content.map((info: IngredientsBeerProps, index: number) => {
-        const contentName = info?.name
-        const {value, unit} = info.amount
-        return (
-          <p key={index}>
-            {`${contentName} - ${value} ${unit}`}
-          </p>
-        )
-      })
-    )
-  }
-  )
+    return content.map((info: IngredientsBeerProps, index: number) => {
+      const contentName = info?.name
+      const { value, unit } = info.amount
+      return <p key={index}>{`${contentName} - ${value} ${unit}`}</p>
+    })
+  })
 }

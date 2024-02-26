@@ -3,8 +3,8 @@
 import Image from 'next/image'
 import { BeerProps, IngredientsKindProps } from '../BeerCard'
 import * as S from './styles'
-import { handleIngredientObj } from '../../utils/handleIngredientObj'
-import { formatIngredient } from '../../utils/formatIngredient'
+import { handleIngredientObj } from '@/utils/handleIngredientObj'
+import { formatIngredient } from '@/utils/formatIngredient'
 
 const BeerDetail = ({
   brewers_tips,
@@ -22,7 +22,7 @@ const BeerDetail = ({
       <h2>{tagline}</h2>
 
       <article>
-        <Image alt={name!} src={image_url!} width={180} height={360} />
+        <Image priority alt={name!} src={image_url!} width={180} height={360} />
 
         <section>
           {description}
@@ -34,7 +34,7 @@ const BeerDetail = ({
           <h3>Ingredients</h3>
           <ul>
             {mergedIngredients.map(
-              (ingredient: string | IngredientsKindProps[], i: number) => {
+              (ingredient: string | IngredientsKindProps, i: number) => {
                 const topping =
                   typeof ingredient === 'string'
                     ? ingredient
