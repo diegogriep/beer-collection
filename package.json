@@ -50,8 +50,10 @@
     "jest-environment-jsdom": "^29.6.4",
     "jest-styled-components": "^7.1.1",
     "lint-staged": "^14.0.1",
+    "msw": "^2.2.1",
     "plop": "^4.0.0",
     "prettier": "3.0.3",
-    "storybook": "^7.4.0"
+    "storybook": "^7.4.0",
+    "whatwg-fetch": "^3.6.20"
   }
 }

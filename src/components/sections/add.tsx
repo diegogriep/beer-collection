@@ -59,7 +59,7 @@ export default function AddSection() {
               id="beer_name"
               type="text"
               name="beer_name"
-              placeholder="What beer are you looking for?"
+              placeholder="What's beer's name?"
             />
 
             <Button type="submit">Send</Button>

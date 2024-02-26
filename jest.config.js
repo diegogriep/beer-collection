@@ -6,12 +6,13 @@ module.exports = {
     'src/**/*.ts(x)?',
     '!src/app/**',
     '!src/lib/registry.tsx',
+    '!src/utils/mockServer/**',
     '!src/types/**',
     '!src/**/stories.tsx',
     '!src/styles/**'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
-  modulePaths: ['<rootDir>/src/'],
+  modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
   },
@@ -20,6 +21,7 @@ module.exports = {
   // we should to force it to use the browser version
   moduleNameMapper: {
     '^styled-components':
-      'styled-components/dist/styled-components.browser.cjs.js'
+      'styled-components/dist/styled-components.browser.cjs.js',
+    '^@/(.*)$': ['<rootDir>/src/$1']
   }
 }
