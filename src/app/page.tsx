@@ -1,5 +1,6 @@
 import HomeSection from '@/components/sections/home'
 import { Metadata } from 'next'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Beer collection',
@@ -7,5 +8,9 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return <HomeSection />
+  return (
+    <Suspense>
+      <HomeSection />
+    </Suspense>
+  )
 }
